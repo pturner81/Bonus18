@@ -12,11 +12,13 @@ namespace Bonus18
         {
             Car car1, car2, car3;
             UsedCar car4, car5, car6;
+
             IntantiateObjects(out car1, out car2, out car3, out car4, out car5, out car6);
 
             List<Car> cars = new List<Car>() { car1, car2, car3, car4, car5, car6 };
 
             string cont = "y";
+
             while (cont == "y" || cont == "yes")
             {
                 PrintList(cars);
@@ -36,10 +38,26 @@ namespace Bonus18
                 PrintList(cars);
 
                 Console.WriteLine();
+
                 Console.WriteLine("Would you like to view/buy another car? (y/n)");
                 cont = ValidateString(Console.ReadLine());
+
                 Console.Clear();
+
+                Console.WriteLine("What Action would you like to choose (1-5)");
+                int UserOption = ValidateInt(Console.ReadLine());
+                UserOption = IsOption1(UserOption);
+
+               // CarApp(UserOption, cars);
+
             }
+
+
+
+
+            Console.WriteLine("Thank you! Press any key to exit.");
+            Console.ReadKey();
+
         }
 
         private static void Result(List<Car> cars, int x, string buy)
@@ -160,6 +178,17 @@ namespace Bonus18
                 Console.WriteLine(f.Message);
                 return "0";
             }
+        }
+        public static int IsOption1(int validatedInput)
+        {
+            while (validatedInput <= 0 || validatedInput >= 5)
+            {
+                Console.WriteLine("That is not an option- Please enter a valid number/option");
+                string UserInput = Console.ReadLine();
+                validatedInput = Program.ValidateInt(UserInput);
+            }
+            return validatedInput;
+
         }
     }
 }

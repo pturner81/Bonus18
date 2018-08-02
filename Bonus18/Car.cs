@@ -59,5 +59,9 @@ namespace Bonus18
             Console.Write($"{Year.ToString().PadRight(15)}");
             Console.Write($"{Price.ToString().PadRight(15)}");
         }
+
+        internal class car1
+        {
+        }
     }
 }
