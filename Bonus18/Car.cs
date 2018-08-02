@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bonus18
 {
@@ -54,10 +50,10 @@ namespace Bonus18
         //Methods
         public virtual void PrintList()
         {
-            Console.Write($"{Make.PadRight(15)}");
-            Console.Write($"{Model.PadRight(15)}");
-            Console.Write($"{Year.ToString().PadRight(15)}");
-            Console.Write($"{Price.ToString().PadRight(15)}");
+            Console.Write($"{Make,-15}");
+            Console.Write($"{Model,-15}");
+            Console.Write($"{Year.ToString(),-15}");
+            Console.Write($"{String.Format($"{Price:c}"),-15}");
         }
     }
 }

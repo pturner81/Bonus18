@@ -93,12 +93,14 @@ namespace Bonus18
 
         private static void PrintHeaders()
         {
-            Console.Write("Make".PadRight(15));
-            Console.Write("Model".PadRight(15));
-            Console.Write("Year".PadRight(15));
-            Console.Write("Price".PadRight(15));
-            Console.WriteLine("Mileage");
-            Console.WriteLine("=========================================================================");
+            string dMake = "Make";
+            string dModel = "Model";
+            string dYear = "Year";
+            string dPrice = "Price";
+            string dMileage = "Mileage";
+
+            Console.WriteLine($"{dMake} {dModel} {dYear} {dPrice} {dMileage}");
+            Console.WriteLine("=====================================================================");
         }
 
         public static void PrintList(List<Car> cars)
@@ -109,7 +111,6 @@ namespace Bonus18
                 c.PrintList();
                 Console.WriteLine();
             }
-            Console.WriteLine();
 
         }
         public static int ValidateInt(string UserInput1)
