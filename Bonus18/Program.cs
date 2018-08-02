@@ -99,8 +99,8 @@ namespace Bonus18
             string dPrice = "Price";
             string dMileage = "Mileage";
 
-            Console.WriteLine($"{dMake} {dModel} {dYear} {dPrice} {dMileage}");
-            Console.WriteLine("=====================================================================");
+            Console.WriteLine($"{dMake, -14} {dModel, -14} {dYear, -14} {dPrice, -14} {dMileage}");
+            Console.WriteLine("===================================================================");
         }
 
         public static void PrintList(List<Car> cars)
