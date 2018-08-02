@@ -59,5 +59,9 @@ namespace Bonus18
             Console.Write($"{Year.ToString(), -15}");
             Console.Write($"{String.Format($"{Price:c}"), -15}");
         }
+
+        internal class car1
+        {
+        }
     }
 }
