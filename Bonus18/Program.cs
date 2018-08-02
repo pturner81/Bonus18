@@ -44,9 +44,9 @@ namespace Bonus18
 
                 Console.Clear();
 
-                Console.WriteLine("What Action would you like to choose (1-5)");
-                int UserOption = ValidateInt(Console.ReadLine());
-                UserOption = IsOption1(UserOption);
+                //Console.WriteLine("What Action would you like to choose (1-5)");
+                //int UserOption = ValidateInt(Console.ReadLine());
+                //UserOption = IsOption1(UserOption);
 
                // CarApp(UserOption, cars);
 
